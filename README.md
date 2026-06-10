@@ -1,4 +1,4 @@
-# 🛸 GS 2026.1 — Quantum Machine Learning para Telemetria de Satélites
+#  GS 2026.1 — Quantum Machine Learning para Telemetria de Satélites
 
 **FIAP | Turma 2TIAP | Global Solution 2026.1**
 **Disciplina:** Computação Quântica e IA
@@ -7,7 +7,7 @@
 
 ---
 
-## 🎬 Vídeo Demonstrativo
+##  Vídeo Demonstrativo
 
 [![SpaceRAG Demo](https://img.youtube.com/vi/v78XVNwJDBg/0.jpg)](https://youtu.be/v78XVNwJDBg)
 
@@ -15,7 +15,7 @@
 
 ---
 
-## 📋 Sobre o Projeto
+##  Sobre o Projeto
 
 Aplicação de **Quantum Machine Learning (QML)** para detecção de anomalias em dados de telemetria de satélites LEO (Low Earth Orbit), utilizando o algoritmo **QSVC** (Quantum Support Vector Classifier) com `ZZFeatureMap` no Qiskit 1.x.
 
@@ -23,7 +23,7 @@ O modelo quântico é comparado com baselines clássicos (SVM-RBF e Random Fores
 
 ---
 
-## 📁 Estrutura do Projeto
+##  Estrutura do Projeto
 
 ```
 GS2026_CQ_2TIAP_NeuroQuantum/
@@ -35,7 +35,7 @@ GS2026_CQ_2TIAP_NeuroQuantum/
 
 ---
 
-## 🔬 O que foi implementado
+##  O que foi implementado
 
 | Requisito | Implementação |
 |---|---|
@@ -49,7 +49,7 @@ GS2026_CQ_2TIAP_NeuroQuantum/
 
 ---
 
-## 🚀 Como Executar
+##  Como Executar
 
 ### Google Colab
 1. Abra o `notebook.ipynb` no [Google Colab](https://colab.research.google.com/)
@@ -76,7 +76,7 @@ jupyter notebook
 
 ---
 
-## 📊 Resultados Esperados
+##  Resultados Esperados
 
 | Modelo | AUC-ROC | F1-Score | T. Treino |
 |---|---|---|---|
@@ -88,7 +88,7 @@ jupyter notebook
 
 ---
 
-## 📚 Referências
+##  Referências
 
 - [NASA MSAD](https://nasa.github.io/MSAD/)
 - [Qiskit Machine Learning](https://qiskit-community.github.io/qiskit-machine-learning/)

@@ -1,96 +1,65 @@
-#  GS 2026.1 — Quantum Machine Learning para Telemetria de Satélites
+# `gs-quantum-computing: QML para Telemetria de Satelites`
 
-**FIAP | Turma 2TIAP | Global Solution 2026.1**
-**Disciplina:** Computação Quântica e IA
-**Grupo:** NeuroQuantum
-**ODS:** 9 · 11 · 13
+> Quantum Support Vector Classifier (QSVC) com Qiskit para deteccao de anomalias em telemetria de satelites LEO. Compara desempenho de kernel quantico (ZZFeatureMap) com SVC classico. GS 2026.1, FIAP.
 
 ---
 
-##  Vídeo Demonstrativo
+## `Tecnologias`
 
-[![SpaceRAG Demo](https://img.youtube.com/vi/v78XVNwJDBg/0.jpg)](https://youtu.be/v78XVNwJDBg)
-
-> Clique na imagem para assistir à demonstração completa no YouTube.
-
----
-
-##  Sobre o Projeto
-
-Aplicação de **Quantum Machine Learning (QML)** para detecção de anomalias em dados de telemetria de satélites LEO (Low Earth Orbit), utilizando o algoritmo **QSVC** (Quantum Support Vector Classifier) com `ZZFeatureMap` no Qiskit 1.x.
-
-O modelo quântico é comparado com baselines clássicos (SVM-RBF e Random Forest) usando métricas obrigatórias: AUC-ROC, F1-Score, acurácia, precisão, recall, tempo de treino e tempo de inferência.
+![Python](https://img.shields.io/badge/Python-3.10+-blue)
+![Qiskit](https://img.shields.io/badge/Qiskit-quantum-purple)
+![scikit-learn](https://img.shields.io/badge/scikit--learn-SVC-orange)
+![NumPy](https://img.shields.io/badge/NumPy-arrays-013243)
+![Colab](https://img.shields.io/badge/Google%20Colab-notebook-F9AB00)
+![License](https://img.shields.io/badge/license-MIT-green)
 
 ---
 
-##  Estrutura do Projeto
+## `O que faz`
 
-```
-GS2026_CQ_2TIAP_NeuroQuantum/
-├── notebook.ipynb       # Notebook Jupyter 100% reproduzível (random_state=42)
-├── relatorio.docx       # Relatório técnico completo (6 seções, ABNT)
-├── requirements.txt     # Dependências com versões exatas
-└── README.md
-```
+Aplica Quantum Machine Learning (QML) para classificar leituras de telemetria de satelites LEO como normais ou anomalas. Usa Qiskit para construir circuitos quanticos variacionais com ZZFeatureMap e compara QSVC (kernel quantico) com SVC classico em termos de acuracia, precisao e recall.
 
 ---
 
-##  O que foi implementado
+## `Como executar (Google Colab)`
 
-| Requisito | Implementação |
-|---|---|
-| Dataset espacial | Telemetria sintética NASA MSAD-style (600 registros, 8 sensores) |
-| Pré-processamento | MinMaxScaler [-π, π] + PCA (4 qubits) sem data leakage |
-| Modelo QML | QSVC com ZZFeatureMap (Qiskit 1.x, 4 qubits, Qiskit Aer) |
-| Visualizações | Circuito quântico + Kernel Matrix + Curvas ROC + Matrizes de confusão |
-| Baselines clássicos | SVM-RBF e Random Forest |
-| Métricas | AUC-ROC, F1, acurácia, precisão, recall, tempo de treino e inferência |
-| Reproducibilidade | `random_state=42` em todas as operações |
-
----
-
-##  Como Executar
-
-### Google Colab
-1. Abra o `notebook.ipynb` no [Google Colab](https://colab.research.google.com/)
-2. Substitua a célula 1 por:
 ```python
-!pip install qiskit==1.3.2 qiskit-machine-learning==0.8.2 qiskit-aer==0.15.1 qiskit-algorithms==0.3.1 scikit-learn imbalanced-learn pandas numpy matplotlib seaborn scipy
-```
-3. Reinicie o runtime: **Runtime → Restart session**
-4. Execute tudo: **Runtime → Run all**
-
-### Local (VS Code)
-```bash
-# Criar ambiente virtual
-python -m venv venv
-venv\Scripts\activate
-
-# Instalar dependências
-pip install -r requirements.txt
-
-# Registrar kernel e abrir notebook
-python -m ipykernel install --user --name venv-gs-qml --display-name "GS QML"
-jupyter notebook
+# 1. Abra notebook.ipynb no Google Colab
+# 2. Execute a celula de instalacao (pip install qiskit qiskit-machine-learning)
+# 3. Runtime - Run all
 ```
 
 ---
 
-##  Resultados Esperados
+## `Arquivos`
 
-| Modelo | AUC-ROC | F1-Score | T. Treino |
-|---|---|---|---|
-| QSVC (QML) | ~0.92 | ~0.87 | ~60–120s |
-| SVM-RBF | ~0.95 | ~0.91 | ~0.01s |
-| Random Forest | ~0.97 | ~0.93 | ~0.05s |
-
-> Valores exatos gerados pelo notebook com `random_state=42`.
+| Arquivo | Descricao |
+|---------|---------|
+| `notebook.ipynb` | Notebook principal com pipeline QML completo |
+| `requirements.txt` | Dependencias do projeto |
+| `relatorio_quantico.pdf` | Relatorio tecnico ABNT |
 
 ---
 
-##  Referências
+## `Conceitos aplicados`
 
-- [NASA MSAD](https://nasa.github.io/MSAD/)
-- [Qiskit Machine Learning](https://qiskit-community.github.io/qiskit-machine-learning/)
-- Biamonte et al. (2017). *Quantum machine learning*. Nature, 549, 195–202.
-- Havlíček et al. (2019). *Supervised learning with quantum-enhanced feature spaces*. Nature, 567, 209–212.
+- **`QSVC`**: versao quantica do SVM usando kernel quantico (ZZFeatureMap) para separacao de classes
+- **`ZZFeatureMap`**: feature map de 2a ordem que codifica dados classicos em estados quanticos via portas ZZ
+- **`Circuitos variacionais`**: parametros treinaveis em portas quanticas otimizados por COBYLA
+- **`Telemetria LEO`**: dados simulados de satelites em Low Earth Orbit (altitude, temperatura, tensao, corrente)
+
+---
+
+## `Licenca`
+
+Distribuido sob a licenca MIT.
+
+---
+
+## `Autor`
+
+**Arthur Baptista dos Santos**
+RM 565346 · Inteligencia Artificial · FIAP 2025-2026
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Arthur%20Baptista-0077B5?logo=linkedin)](https://linkedin.com/in/arthur-baptista-dos-santos)
+[![GitHub](https://img.shields.io/badge/GitHub-Arthur--Baptista--dos--Santos-181717?logo=github)](https://github.com/Arthur-Baptista-dos-Santos)
